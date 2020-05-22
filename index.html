@@ -140,6 +140,68 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-OpenGl环境搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/22/OpenGl%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">OpenGl环境搭建</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/22/OpenGl%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="archive-article-date">
+  	<time datetime="2020-05-22T03:00:26.171Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="OpenGl-环境搭建"><a href="#OpenGl-环境搭建" class="headerlink" title="OpenGl 环境搭建"></a>OpenGl 环境搭建</h3>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/22/OpenGl%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-OpenGl简单使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -202,19 +264,19 @@
 
 
   
-    <article id="post-OpenGl环境搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-单链表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/22/OpenGl%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">OpenGl环境搭建</a>
+      <a class="article-title" href="/2020/05/22/%E5%8D%95%E9%93%BE%E8%A1%A8/">单链表</a>
     </h1>
   
 
         
-        <a href="/2020/05/22/OpenGl%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="archive-article-date">
+        <a href="/2020/05/22/%E5%8D%95%E9%93%BE%E8%A1%A8/" class="archive-article-date">
   	<time datetime="2020-05-22T03:00:26.171Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-22</time>
 </a>
         
@@ -222,7 +284,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="OpenGl-环境搭建"><a href="#OpenGl-环境搭建" class="headerlink" title="OpenGl 环境搭建"></a>OpenGl 环境搭建</h3>
+        <h4 id="单链表问题与思路"><a href="#单链表问题与思路" class="headerlink" title="==单链表问题与思路=="></a>==单链表问题与思路==</h4><h5 id="1-找出单链表的倒数第K个元素（仅允许遍历一遍链表）"><a href="#1-找出单链表的倒数第K个元素（仅允许遍历一遍链表）" class="headerlink" title="1. 找出单链表的倒数第K个元素（仅允许遍历一遍链表）"></a>1. 找出单链表的倒数第K个元素（仅允许遍历一遍链表）</h5><p>使用指针追赶的方法。定义两个指针fast和slow，fast先走K步，然后fast和slow同时继续走。当fast到链表尾部时，slow指向倒数第K个。注意要考虑链表长度应该大于K</p>
+<h5 id="2-找出单链表的中间元素（仅允许遍历一遍链表）"><a href="#2-找出单链表的中间元素（仅允许遍历一遍链表）" class="headerlink" title="2. 找出单链表的中间元素（仅允许遍历一遍链表）"></a>2. 找出单链表的中间元素（仅允许遍历一遍链表）</h5><p>使用指针追赶的方法。fast每次走一步，slow每次走两步。当fast到链表尾部时，slow指向链表的中间元素。</p>
+<h5 id="3-判断单链表是否有环？"><a href="#3-判断单链表是否有环？" class="headerlink" title="3. 判断单链表是否有环？"></a>3. 判断单链表是否有环？</h5><p>方法一：使用指针追赶的方法。slow指针每次走一步，fast指针每次走两步。如存在环，则两者相遇；如不存在环，fast遇到NULL退出。<br>方法二：使用p、q两个指针，p总是向前走，但q每次都从头开始走。</p>
+<h5 id="4-如何知道环的长度？"><a href="#4-如何知道环的长度？" class="headerlink" title="4. 如何知道环的长度？"></a>4. 如何知道环的长度？</h5><p>记录下碰撞点（或者找在环中任意一结点都可以），让slow从碰撞点开始，绕着环走一圈，再次到碰撞点的位置时，所走过的结点数就是环的长度s。</p>
+<h5 id="5-如何找到环的入口？"><a href="#5-如何找到环的入口？" class="headerlink" title="5. 如何找到环的入口？"></a>5. 如何找到环的入口？</h5><p>分别从碰撞点、头指针开始走，相遇的那个点就是连接点。</p>
+<h5 id="6-判断两个链表（无环）是否相交？"><a href="#6-判断两个链表（无环）是否相交？" class="headerlink" title="6. 判断两个链表（无环）是否相交？"></a>6. 判断两个链表（无环）是否相交？</h5><p>方法一：采用暴力的方法，遍历两个链表，在遍历的过程中进行比较，看节点是否相同。</p>
+<p>方法二：两链表一旦相交，相交节点一定有相同的内存地址，因此利用内存地址建立哈希表，如此通过判断两个链表中是否存在内存地址相同的节点判断两个链表是否相交。具体做法是：遍历第一个链表，并利用地址建立哈希表，遍历第二个链表，看看地址哈希值是否和第一个表中的节点地址值有相同即可判断两个链表是否相交。时间复杂度O(（length（A）+ length（B))</p>
+<p>方法三：问题转化法。先遍历第一个链表到其尾部，然后将尾部的原本指向NULL的next指针指向第二个链表。这样两个链表就合成了一个链表，问题转变为判断新的链表是否有环？</p>
+<p>方法四：一旦两个链表相交，那么两个链表从相交节点开始到尾节点一定都是相同的节点。所以，如果他们相交的话，那么他们最后的一个节点一定是相同的，因此分别遍历到两个链表的尾部，然后判断他们是否相同。</p>
+<h5 id="7-如何知道两个单链表（可能有环）是否相交"><a href="#7-如何知道两个单链表（可能有环）是否相交" class="headerlink" title="7. 如何知道两个单链表（可能有环）是否相交"></a>7. 如何知道两个单链表（可能有环）是否相交</h5><p>思路：根据两个链表是否有环来分别处理，若相交这个环属于两个链表共有<br>（1）如果两个链表都没有环。<br>（2）一个有环，一个没环。肯定不相交<br>（3）两个都有环。<br>①求出A的环入口，判断其是否在B链表上，如果在，则相交。<br>② 在A链表上，使用指针追赶的方法，找到两个指针碰撞点，之后判断碰撞点是否在B链表上。如果在，则相交。</p>
+<h5 id="8-寻找两个相交链表的第一个公共节点"><a href="#8-寻找两个相交链表的第一个公共节点" class="headerlink" title="8. 寻找两个相交链表的第一个公共节点"></a>8. 寻找两个相交链表的第一个公共节点</h5><p>方法一：最简单的方法就是先顺序访问其中一个链表，在每访问一个节点时，都对另外一个链表进行遍历，直到找到一个相等的节点位置，如果链表长度分别是m,n 则时间复杂度为O(mn)。</p>
+<p>方法二：（两种情况）</p>
+<p>① 相交的点，在环外。如果两个链表有公共节点，那么该公共节点之后的所有节点都是两个链表所共有的，所以长度一定也是相等的，如果两个链表的总长度是相等的，那么我们对两个链表进行遍历，则一定同时到达第一个公共节点。但是链表的长度实际上不一定相同，所以计算出两个链表的长度之差n，然后让长的那个链表先移动n步，短的链表再开始向后遍历，这样他们一定同时到达第一个公共节点，我们只需要在向后移动的时候比较两个链表的节点是否相等就可以获得第一个公共节点。时间复杂度是O(m+n)。</p>
+<p>② 相交的点在环内。当交点在环中时，此时的交点可以是A链表中的环入口点，也可以是B链表中环入口点。这是因为如果把B看出一个完整的链表，而A指向了B链表，则此时交点是A的环入口点。反之交点是链表B的环入口点。<br>思路：根据上述分析，可以直接求出A的环入口点或者B的环入口点就可以了。</p>
+<h4 id="单链表代码实现"><a href="#单链表代码实现" class="headerlink" title="==单链表代码实现=="></a>==单链表代码实现==</h4><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">链表结点声明如下：</span><br><span class="line"><span class="keyword">struct</span> ListNode&#123;    </span><br><span class="line"> <span class="keyword">int</span> m_nKey;    </span><br><span class="line"> ListNode * m_pNext;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h5 id="1-求单链表中结点的个数"><a href="#1-求单链表中结点的个数" class="headerlink" title="1. 求单链表中结点的个数"></a>1. 求单链表中结点的个数</h5><p>这是最最基本的了，应该能够迅速写出正确的代码，注意检查链表是否为空。时间复杂度为O（n）。参考代码如下：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 求单链表中结点的个数  </span></span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">int</span> GetListLength(ListNode * pHead)  </span><br><span class="line">  &#123;  </span><br><span class="line">      <span class="keyword">if</span>(pHead == <span class="literal">NULL</span>)  </span><br><span class="line">          <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">   </span><br><span class="line">     <span class="keyword">unsigned</span> <span class="keyword">int</span> nLength = <span class="number">0</span>;  </span><br><span class="line">     ListNode * pCurrent = pHead;  </span><br><span class="line">    <span class="keyword">while</span>(pCurrent != <span class="literal">NULL</span>)  </span><br><span class="line">    &#123;  </span><br><span class="line">         nLength++;  </span><br><span class="line">        pCurrent = pCurrent-&gt;m_pNext;  </span><br><span class="line">     &#125;  </span><br><span class="line">     <span class="keyword">return</span> nLength;  </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -234,7 +314,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/22/OpenGl%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/05/22/%E5%8D%95%E9%93%BE%E8%A1%A8/">展开全文 >></a>
         </p>
       
 
